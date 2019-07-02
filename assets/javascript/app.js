@@ -28,15 +28,28 @@ $(document).ready(() => {
     };
     
     // Onclick start button
-    $('#start').click(()=> {
+    $('#start').click(() => {
         // Question show
         $('#question').show(showQuestion);
+        let countTimeLeft = 10;
+        let countDownTimer = setInterval(function () {
+            document.getElementById('timer').innerHTML = countTimeLeft + ' second remaining';
+            countTimeLeft -= 1;
+            if (countTimeLeft <= 0) {
+                clearInterval(countDownTimer);            
+                $('#timer').show(countTimeLeft);
+                
+            }
+            
+        },1000);
+        
         // Messages and Start Button hide
         $('#message').hide();
         $('#start').hide();
-        
-        
+                
     });
+   
+
 });
 
 
