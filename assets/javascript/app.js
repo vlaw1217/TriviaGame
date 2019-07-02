@@ -1,40 +1,45 @@
 $(document).ready(() => {
 
-//Front page to explain the game  
+    //Front page to explain the game  
     myMessage =
-    'You have total 10 questions. <br>' +
-    'Total time is 100 sec. <br>' +
-    'Each question you have 10 sec to anwser. <br>' +
-    'Good luck!';
+        'You have total 10 questions. <br>' +
+        'Total time is 100 sec. <br>' +
+        'Each question you have 10 sec to anwser. <br>' +
+        'Good luck!';
     
     document.getElementById('message').innerHTML = myMessage;
             
     
     
-});
-
-// Onclick start button
-$('#start').click(() => { 
-// Question show
-    $('#question').show();
-// Messages and Start Button hide
-    $('#message').hide();
-    $('#start').hide();
-
-    let myQuestions = [
     
-        'Question 1. How many provinces in Canada?',
-        'Question 2. Which is the largest province in Canada?',
-        'abc',
-    ];
-   
-    document.getElementById('question').innerHTML = myQuestions;
-
-    for (let i = 0; i < myQuestion.length; i++) {
-        let randomQuestion = myQuestion(Math.floor(Math.random() * 4));
-    }
+    let myQuestion = []
+    myQuestion[1] = 'How many provinces in Canada?';
+    myQuestion[2] = 'Which is the largest province in Canada?';
+    myQuestion[3] = 'abc';
+    
+    
+    /*let myQuestionsLength = myQuestions.length;*/
+    function showQuestion() {
+        for (let i = 0; i < myQuestion.length; i++) {
+            let randomQuestion = Math.floor(Math.random() * (myQuestion.length));
+            document.getElementById('question').innerHTML = myQuestion[randomQuestion];
+        }
+        
+    };
+    
+    // Onclick start button
+    $('#start').click(()=> {
+        // Question show
+        $('#question').show(showQuestion);
+        // Messages and Start Button hide
+        $('#message').hide();
+        $('#start').hide();
+        
+        
+    });
 });
-            
+
+
            /* function quizQuestions() {
                 let showQuestion = document.getElementById('question').innerHTML = myQuestions.show();
             }
