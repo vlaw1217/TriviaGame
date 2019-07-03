@@ -36,11 +36,14 @@ $(document).ready(() => {
 
     i = 0;
     myQuestion = [
-        ['How many provinces in Canada?', 'Seven', 'Eight', 'Nine', 'Ten'],
-        ['Which is the largest province in Canada?', 'm', 'a', 'd', 'z'],
-        ['Who was the first prime ministr of Canada?', 'Louis St.Laurent', 'Pierre Trudeau', 'Sir John A.Macdonald', 'Sir John Abbott'],
+        ['How many provinces in Canada?', 'Seven', 'Eight', 'Nine', 'Ten', 'Ten'],
+        ['Which is the largest province in Canada?', 'm', 'a', 'd', 'z', 'm'],
+        ['Who was the first prime ministr of Canada?', 'Louis St.Laurent', 'Pierre Trudeau', 'Sir John A.Macdonald', 'Sir John Abbott', 'Sir John A.Macdonald'],
 
     ];
+
+
+
     /*let questionTracker = [];
     let questionAmount = 3;
     for (i = 0; i < myQuestion.length; i++) {
@@ -63,26 +66,47 @@ $(document).ready(() => {
 
         let randomQuestion = Math.floor(Math.random() * myQuestion.length);
 
-        document.getElementById('myLabel').innerHTML = myQuestion[randomQuestion][0];
-        myForm.opt1.value = myQuestion[randomQuestion][1];
-        myForm.opt2.value = myQuestion[randomQuestion][2];
-        myForm.opt3.value = myQuestion[randomQuestion][3];
-        myForm.opt4.value = myQuestion[randomQuestion][4];
+        let qus = document.getElementById('myLabel').innerHTML = myQuestion[randomQuestion][0];
+        //console.log(myQuestion[0][5]);
+        
+            myForm.opt1.value = myQuestion[randomQuestion][1],
+            myForm.opt2.value = myQuestion[randomQuestion][2];
+            myForm.opt3.value = myQuestion[randomQuestion][3];
+            myForm.opt4.value = myQuestion[randomQuestion][4];
+        
+        
 
-        //document.getElementById('myLabel').innerHTML = myQuestion[randomQuestion][randomAnswer];
-        //myForm.opt1.value = myQuestion[i][1];
-        //myForm.opt2.value = myQuestion[i][2];
-        //myForm.opt3.value = myQuestion[i][3];
-        //myForm.opt4.value = myQuestion[i][4];
+        $('#answerButton0').click(() => {
+
+            if (myForm.opt1.value === myQuestion[randomQuestion][5]) {
+                console.log('correct');
+            } else {
+                console.log('wrong');
+            }
+
+        })
+        $('#answerButton1').click(() => {
+            if (myForm.opt2.value === myQuestion[randomQuestion][5]) {
+                console.log('correct');
+            } else {
+                console.log('wrong');
+            }
+        })
+        $('#answerButton2').click(() => {
+            if (myForm.opt3.value === myQuestion[randomQuestion][5]) {
+                console.log('correct');
+            } else {
+                console.log('wrong');
+            }
+        })
+        $('#answerButton3').click(() => {
+            if (myForm.opt4.value === myQuestion[randomQuestion][5]) {
+                console.log('correct');
+            } else {
+                console.log('wrong');
+            }
+        })
     }
-
-    $('#nxtbtn').click(() => {
-        randam.shuffle(myQuestion);
-        /*Math.floor(Math.random() * (myQuestion.length));*/
-        document.getElementById('nxtbtn').innerHTML = myQuestion[0][0];
-
-
-    });
 
 
 
