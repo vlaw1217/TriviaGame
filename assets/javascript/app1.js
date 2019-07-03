@@ -1,7 +1,8 @@
 $(document).ready(() => {
 
 
-
+    $('#nxtbtn').hide();
+    $('#result').hide();
     //Front page to explain the game 
 
     myMessage =
@@ -63,7 +64,6 @@ $(document).ready(() => {
 
 
     function showQuestion() {
-
 
 
         //setTimeout(StopQuestion, 5000);
@@ -138,143 +138,161 @@ $(document).ready(() => {
 
         $('#start').hide();
 
+      
+
         // End timer Function
 
 
 
         //Start compare answer
+        /*document.getElementById('score').innerHTML = 'Score' + score;
+      
+        let score = 0;*/
 
-        $('#answerButton0').click(() => {
+            
+            //}
+          
 
-            if (myForm.opt1.value === correctAnswer) {
+            $('#answerButton1').click(() => {
 
-                console.log('Correct Answer= ' + correctAnswer + 'Your answer ' + myForm.opt1.value);
+                if (myForm.opt1.value === correctAnswer) {
+                    score = score + 1;
+                    console.log('Correct1')
 
-            } else {
+                } else {
 
-                console.log('Wrong Answer= ' + correctAnswer + 'Your answer ' + myForm.opt1.value);
+                    console.log('Wrong1')
 
-            }
+                }
 
-            countTimeLeft = 0;
+                countTimeLeft = 0;
 
-            //showQuestion();
+                showQuestion();
 
-        });
+            });
 
-
-
-        $('#answerButton1').click(() => {
-
-            //alert(correctAnswer);
-
-           // alert(myForm.opt2.value);
-
-            if (myForm.opt2.value === correctAnswer) {
-
-                console.log('correct2');
-
-            } else {
-
-                console.log('wrong2');
-
-            }
-
-            countTimeLeft = 0;
-
-           // showQuestion();
-
-        });
-
-
-
+        let score = 0;
+        
+        
+        
+        
         $('#answerButton2').click(() => {
+            
+            document.getElementById('score').innerHTML = ('Score ' +score,10,10);
+                //alert(correctAnswer);
 
-            //alert(correctAnswer);
+                // alert(myForm.opt2.value);
 
-            //alert(myForm.opt3.value);
+                if (myForm.opt2.value === correctAnswer) {
+                    score = score + 1;
+                    console.log('correct2');
 
-            if (myForm.opt3.value === correctAnswer) {
+                } else {
 
-                console.log('correct3');
+                    console.log('wrong2');
 
-            } else {
+                }
 
-                console.log('wrong3');
+                countTimeLeft = 0;
 
-            }
+                showQuestion();
 
-            countTimeLeft = 0;
-
-           // showQuestion();
-
-        });
-
-
-
-        $('#answerButton3').click(() => {
-
-           // alert(correctAnswer);
-
-           // alert(myForm.opt4.value);
-
-            if (myForm.opt4.value === correctAnswer) {
-
-                console.log('correct4');
-
-            } else {
-
-                console.log('wrong4');
-
-            }
-
-            countTimeLeft = 0;
-
-           // showQuestion();
-
-        });
-
-        //end compare answer
+            });
 
 
 
-        //Start next question when click
+            $('#answerButton3').click(() => {
 
-        $('#nxtbtn').click(() => {
+                alert(correctAnswer);
 
-            countTimeLeft = 0;
+                alert(myForm.opt3.value);
 
-            showQuestion();
+                if (myForm.opt3.value === correctAnswer) {
+                    score = score +1;
+                    console.log('correct3');
 
-            //            for (i = 0; i < myQuestion.length; i++);
+                } else {
 
-            //showQuestion()
+                    console.log('wrong3');
 
-            //  function addScore() {
+                }
 
-            //alert('addscore');
+                countTimeLeft = 0;
 
-            //alert(score);
+                showQuestion();
 
-            //if (correctAnswer === true) {
-
-            //score++
-
-            //document.getElementById('score').innerHTML = 'Score';
-
-            //}
-
-            //}
-
-        })
-
-        //End next question
+            });
 
 
 
-    }
+            $('#answerButton4').click(() => {
 
-    //end showquestion function
+                // alert(correctAnswer);
+
+                // alert(myForm.opt4.value);
+
+                if (myForm.opt4.value === correctAnswer) {
+                    score = score + 1;
+                    
+                    
+                    console.log('correct4');
+
+                } else {
+
+                    console.log('wrong4');
+
+                }
+
+                countTimeLeft = 0;
+
+                showQuestion();
+
+            });
+            /*let score = 0;
+        document.getElementById('score').innerHTML = 'Score ' + score;*/
+
+
+            //end compare answer
+
+
+
+            //Start next question when click
+
+            $('#nxtbtn').click(() => {
+
+                countTimeLeft = 0;
+
+                showQuestion();
+
+                //            for (i = 0; i < myQuestion.length; i++);
+
+                //showQuestion()
+
+                //  function addScore() {
+
+                //alert('addscore');
+
+                //alert(score);
+
+                //if (correctAnswer === true) {
+
+                //score++
+
+                //document.getElementById('score').innerHTML = 'Score';
+
+                //}
+
+                //}
+
+            })
+
+            //End next question
+
+        }
+
+        
+
+        //end showquestion function
 
 
 
@@ -282,7 +300,7 @@ $(document).ready(() => {
 
 
 
-
+    
 
 
 
