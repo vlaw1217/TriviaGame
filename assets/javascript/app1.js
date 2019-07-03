@@ -33,9 +33,28 @@ $(document).ready(() => {
 
         ['How many provinces in Canada?', 'Seven', 'Eight', 'Nine', 'Ten', 'Ten'],
 
-        ['Which is the largest province in Canada?', 'm', 'a', 'd', 'z', 'm'],
+        ['Which is the largest province in Canada?', 'Quebec', 'Ontario', 'Nunavut', 'Manitoba', 'Quebec'],
 
         ['Who was the first prime ministr of Canada?', 'Louis St.Laurent', 'Pierre Trudeau', 'Sir John A.Macdonald', 'Sir John Abbott', 'Sir John A.Macdonald'],
+        ["What is Canada's national animal?", 'The Polar Bear', 'Racoon', 'Moose', 'The Beaver', 'The Beaver'],
+
+        ['What province has the most population in Candada?', 'British Columbia', 'Ontario', 'Quebec', 'Alberta', 'Ontario'],
+
+        ['Which city was "Not" the cpatial city before Ottawa?', 'Edmonton', 'Kingston', 'Montreal', 'Toronto', 'Edmonton']
+        
+        ['When did Canada befcome a completely independent country?', '1864', '1967', '1770', '1867', '1867'],
+
+        ['Where is the Rocky Mountains located?', 'Manitoba', 'British Columbia', ',Yukon', 'Saskatchewan', 'British Columbia']
+
+        ['Which party is the Cannada current goverment?', 'Conservative', 'Green', 'Liberal', 'New Democratic', 'Liberal'],
+
+        ['In 2019, which university is in the first ranking in Canada', 'Universith of Aberta', 'University of Toronto', 'University of Bristish Columbia', 'McGill University', 'University of Toronto'],
+        
+        ['The oldest bank in Canada is', 'Royal Bank of Canada(RBC)', 'Bank of Montreal(BMO)', 'Bank of Nova Scotia(Scotiabank)', 'Toronto-Dominion Bank (TD', 'BMO'],
+        
+        ['How old is Ontario?', '149', '150', '151', '152', '152'],
+      
+    
 
     ];
 
@@ -48,6 +67,7 @@ $(document).ready(() => {
     // Onclick start button
 
     $('#start').click(() => {
+        $('#nxtbtn').show();
 
         // Question show
 
@@ -56,10 +76,6 @@ $(document).ready(() => {
     });
 
     //end Onclick
-
-
-
-
 
 
 
@@ -97,8 +113,6 @@ $(document).ready(() => {
         //alert(correctAnswer);
 
         //end random question and answer        
-
-
 
 
 
@@ -152,6 +166,7 @@ $(document).ready(() => {
             
             //}
           
+            let score = 0;
 
             $('#answerButton1').click(() => {
 
@@ -171,14 +186,13 @@ $(document).ready(() => {
 
             });
 
-        let score = 0;
         
         
         
         
         $('#answerButton2').click(() => {
             
-            document.getElementById('score').innerHTML = ('Score ' +score,10,10);
+          
                 //alert(correctAnswer);
 
                 // alert(myForm.opt2.value);
@@ -263,6 +277,8 @@ $(document).ready(() => {
                 countTimeLeft = 0;
 
                 showQuestion();
+
+                document.getElementById('score').innerHTML = ('Score ' + score);
 
                 //            for (i = 0; i < myQuestion.length; i++);
 
