@@ -2,28 +2,31 @@
     box-sizing: border-box;
 }
 body{
-    background: silver
+    background: rgba(214, 159, 127, 0.932)
 
 }
 header {
     text-align: center;
     font-size: 30px;
+    color: white;
 
 }
 
 #message{
     text-align: center;
     font-size: 20px;
+    color: white;
 
 
 }
 button{
     font-size: 30px;
+    color: rgb(24, 73, 92);
     
 }
 
 button:hover {
-    background: orange;
+    background: rgb(57, 177, 147);
     
 
 }
@@ -33,9 +36,56 @@ button:hover {
     padding: 15px 30px;
 
 }
-.row2 {
-    text-align: right;
-}
+
 .row3 {
+    clear: both;
     text-align: center;
+    padding: 30px;
+    font-size: 30px
+    
+    
+}
+#countDown{
+    font-size: 20px;
+    padding: 20px;
+}
+.row2 {
+    text-align: center;
+   
+    
+    
+}
+label#myLabel{
+font-size: 25px;
+padding: 20px;
+color: white;
+}
+#btn {
+    font-size: 30px;
+}
+
+input#answerButton1{
+    font-size: 20px;
+    border: solid,black,5px;
+    padding: 20px;
+}
+input#answerButton2 {
+    font-size: 20px;
+    border: solid,black,5px;
+    padding: 20px;
+}
+input#answerButton3 {
+    font-size: 20px;
+    border: solid,black,5px;
+    padding: 20px;
+}
+input#answerButton4 {
+    font-size: 20px;
+    border: solid,black,5px;
+    padding: 20px;
+}
+input#nxtbtn {
+    text-align: center;
+    font-size: 30px;
+    padding: 15px 30px;
 }
