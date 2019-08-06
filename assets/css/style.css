@@ -2,90 +2,90 @@
     box-sizing: border-box;
 }
 body{
-    background: rgba(214, 159, 127, 0.932)
-
+    background-image: url("images/mapleleaf.jpg");
+   
+    /*background: rgba(214, 159, 127, 0.932)*/
 }
-header {
+h1 {
     text-align: center;
-    font-size: 30px;
-    color: white;
+    font-size: 60px;
+    color: black;
+    padding: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px oldlace;
 
 }
 
 #message{
     text-align: center;
-    font-size: 20px;
-    color: white;
-
-
+    font-size: 40px;
+    color: rgb(54, 47, 47);
+    padding-bottom: 50px;
+    text-shadow: 2px 2px 2px yellowgreen;
 }
-button{
-    font-size: 30px;
-    color: rgb(24, 73, 92);
-    
+
+.col-md-12{
+    text-align: center;
+}
+
+#startButton button {
+    width: 200px;
+    padding: 50px;
+    box-shadow: 2px 2px 2px rgb(207, 204, 204);
 }
 
 button:hover {
-    background: rgb(57, 177, 147);
-    
-
-}
-#start{
-    text-align: center;
-    font-size: 30px;
-    padding: 15px 30px;
-
-}
-
-.row3 {
-    clear: both;
-    text-align: center;
-    padding: 30px;
-    font-size: 30px
-    
-    
+    background: rgb(216, 218, 107);   
 }
 #countDown{
     font-size: 20px;
     padding: 20px;
 }
 .row2 {
-    text-align: center;
-   
-    
-    
+    text-align: center;  
 }
-label#myLabel{
-font-size: 25px;
-padding: 20px;
-color: white;
+#timer {
+    clear:both;
+    font-size: 45px;
 }
-#btn {
+#question {
     font-size: 30px;
+    padding: 40px;
+    font-weight: bold;
+}
+#answerBtn button{
+    clear:both;
+    font-size: 25px;
+    width: 500px;
+    height: 60px;
+   
+}
+.total {
+      font-size: 28px;
+      font-weight: bolder;
+    
+}
+p#msg{
+    font-size: 40px;
+    font-weight: bolder;
+    color:rgb(211, 207, 214);
+    text-shadow: 1px 2px 1px blue
+}
+.btn-gp {
+margin-top: 50px;
+width: 100px;
+height: 50px;
+background-color: brown;
+color: rgb(171, 194, 194);
+font-size: 20px;
 }
 
-input#answerButton1{
-    font-size: 20px;
-    border: solid,black,5px;
-    padding: 20px;
-}
-input#answerButton2 {
-    font-size: 20px;
-    border: solid,black,5px;
-    padding: 20px;
-}
-input#answerButton3 {
-    font-size: 20px;
-    border: solid,black,5px;
-    padding: 20px;
-}
-input#answerButton4 {
-    font-size: 20px;
-    border: solid,black,5px;
-    padding: 20px;
-}
-input#nxtbtn {
-    text-align: center;
-    font-size: 30px;
-    padding: 15px 30px;
+#timeup {
+    clear:both;
+    font-size: 80px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgb(212, 212, 35);
+    margin-top: 100px;
+
 }
